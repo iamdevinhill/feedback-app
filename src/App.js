@@ -6,8 +6,6 @@ import FeedbackForm from './components/FeedbackForm'
 import AboutIconLink from './components/AboutIconLink'
 import AboutPage from './pages/AboutPage'
 import { FeedbackProvider } from './context/FeedbackContext'
-import { StarRating } from './components/StarRating'
-
 
 function App() {
   return (
@@ -20,7 +18,6 @@ function App() {
               path='/'
               element={
                 <>
-                  <StarRating />
                   <FeedbackForm />
                   <FeedbackStats />
                   <FeedbackList />
