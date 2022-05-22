@@ -3,6 +3,7 @@ import { useContext } from 'react'
 import PropTypes from 'prop-types'
 import Card from './shared/Card'
 import FeedbackContext from '../context/FeedbackContext'
+import { StarRating } from './StarRating'
 
 function FeedbackItem({ item }) {
   const { deleteFeedback, editFeedback } = useContext(FeedbackContext)
@@ -17,6 +18,7 @@ function FeedbackItem({ item }) {
         <FaEdit color='purple' />
       </button>
       <div className='text-display'>{item.text}</div>
+      <StarRating feedbackItem={item} />
     </Card>
   )
 }
